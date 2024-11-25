@@ -1,0 +1,119 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "GLFW",
+			"type": "shell",
+			"command": "wget",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"args": [
+				"https://github.com/glfw/glfw/releases/download/3.4/glfw-3.4.zip"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "GL",
+			"type": "shell",
+			"command": "wget",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"args": [
+				"https://gen.glad.sh/generated/tmp8kbjqc8hglad/glad.zip"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "unzip glfw",
+			"type": "shell",
+			"command": "unzip",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"args": [
+				"glfw*.zip"
+			],
+			"dependsOn":[
+				"GLFW"
+			]
+		},
+		{
+			"label": "unzip gl",
+			"type": "shell",
+			"command": "unzip",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"args": [
+				"glad.zip"
+			],
+			"dependsOn":[
+				"GL"
+			]
+		},
+		{
+			"label": "create",
+			"type": "shell",
+			"command": "mkdir",
+			"args": [
+				"-p",
+				"build"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"detail": "Created for Umit",
+			"dependsOn":[
+				"unzip gl"
+			]
+		},
+		{
+			"label": "cmake",
+			"type": "shell",
+			"command": "cmake",
+			"options": {
+				"cwd": "${workspaceFolder}/build"
+			},
+			"args": [
+				"${workspaceFolder}"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"dependsOn": [
+				"create"
+			],
+			"detail": "CMAKE RUN"
+		},
+		{
+			"label": "make",
+			"type": "shell",
+			"command": "make",
+			"options": {
+				"cwd": "${workspaceFolder}/build"
+			},
+			"args": [
+				"-l"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "RUN",
+			"type": "shell",
+			"command": "",
+			"dependsOn": [
+				"make"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/build"
+			},
+			"args": [
+				"./Deneme"
+			],
+			"problemMatcher": []
+		}
+	]
+}

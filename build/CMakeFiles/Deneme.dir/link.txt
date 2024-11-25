@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Deneme.dir/src/library.cpp.o CMakeFiles/Deneme.dir/src/main.cpp.o -o Deneme  /usr/local/lib/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a -lm -ldl 

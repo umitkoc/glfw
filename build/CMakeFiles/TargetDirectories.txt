@@ -1,0 +1,3 @@
+/home/ubuntu/game/build/CMakeFiles/Deneme.dir
+/home/ubuntu/game/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/game/build/CMakeFiles/rebuild_cache.dir
