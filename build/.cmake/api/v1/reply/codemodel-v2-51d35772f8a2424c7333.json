@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Deneme::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Deneme-0b6179bbe06d0ccd4dc6.json",
+					"jsonFile" : "target-Deneme-b678844ebfae418ba9c2.json",
 					"name" : "Deneme",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/ubuntu/game/build",
-		"source" : "/home/ubuntu/game"
+		"build" : "/home/umitk/Desktop/glfw/build",
+		"source" : "/home/umitk/Desktop/glfw"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 3
 	}
 }
