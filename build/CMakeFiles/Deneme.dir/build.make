@@ -73,29 +73,29 @@ CMakeFiles/Deneme.dir/src/library.cpp.o: CMakeFiles/Deneme.dir/flags.make
 CMakeFiles/Deneme.dir/src/library.cpp.o: ../src/library.cpp
 CMakeFiles/Deneme.dir/src/library.cpp.o: CMakeFiles/Deneme.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/umitk/Desktop/glfw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Deneme.dir/src/library.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Deneme.dir/src/library.cpp.o -MF CMakeFiles/Deneme.dir/src/library.cpp.o.d -o CMakeFiles/Deneme.dir/src/library.cpp.o -c /home/umitk/Desktop/glfw/src/library.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Deneme.dir/src/library.cpp.o -MF CMakeFiles/Deneme.dir/src/library.cpp.o.d -o CMakeFiles/Deneme.dir/src/library.cpp.o -c /home/umitk/Desktop/glfw/src/library.cpp
 
 CMakeFiles/Deneme.dir/src/library.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Deneme.dir/src/library.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/umitk/Desktop/glfw/src/library.cpp > CMakeFiles/Deneme.dir/src/library.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/umitk/Desktop/glfw/src/library.cpp > CMakeFiles/Deneme.dir/src/library.cpp.i
 
 CMakeFiles/Deneme.dir/src/library.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Deneme.dir/src/library.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/umitk/Desktop/glfw/src/library.cpp -o CMakeFiles/Deneme.dir/src/library.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/umitk/Desktop/glfw/src/library.cpp -o CMakeFiles/Deneme.dir/src/library.cpp.s
 
 CMakeFiles/Deneme.dir/src/main.cpp.o: CMakeFiles/Deneme.dir/flags.make
 CMakeFiles/Deneme.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/Deneme.dir/src/main.cpp.o: CMakeFiles/Deneme.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/umitk/Desktop/glfw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Deneme.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Deneme.dir/src/main.cpp.o -MF CMakeFiles/Deneme.dir/src/main.cpp.o.d -o CMakeFiles/Deneme.dir/src/main.cpp.o -c /home/umitk/Desktop/glfw/src/main.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Deneme.dir/src/main.cpp.o -MF CMakeFiles/Deneme.dir/src/main.cpp.o.d -o CMakeFiles/Deneme.dir/src/main.cpp.o -c /home/umitk/Desktop/glfw/src/main.cpp
 
 CMakeFiles/Deneme.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Deneme.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/umitk/Desktop/glfw/src/main.cpp > CMakeFiles/Deneme.dir/src/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/umitk/Desktop/glfw/src/main.cpp > CMakeFiles/Deneme.dir/src/main.cpp.i
 
 CMakeFiles/Deneme.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Deneme.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/umitk/Desktop/glfw/src/main.cpp -o CMakeFiles/Deneme.dir/src/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/umitk/Desktop/glfw/src/main.cpp -o CMakeFiles/Deneme.dir/src/main.cpp.s
 
 # Object files for target Deneme
 Deneme_OBJECTS = \

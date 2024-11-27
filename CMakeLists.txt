@@ -9,7 +9,8 @@ set(PROJECT_SOURCES
 set(PROJECT_HEADERS         
        ${PROJECT_INCLUDE_DIR}/library.hpp)
 
-find_package(glfw3 3.4 REQUIRED)
+find_package(glfw3 3.3.6 REQUIRED)
+find_package(glm REQUIRED)
 include_directories(${PROJECT_INCLUDE_DIR})
 add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
 
