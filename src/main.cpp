@@ -2,15 +2,20 @@
 #include "shaders.hpp"
 #include <glad/gl.h>
 #include <GLFW/glfw3.h>
+#include "library.hpp"
 float vertices[] = {
     -0.6f, -0.6f, 0.0f,
     0.5f, -0.5f, 0.0f,
     0.0f, 0.5f, 0.0f};
 auto main() -> int
 {
-    // glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    // glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    // glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+    LibraryTest test;
+    std::cout<<test.sum(5,5)<<std::endl;
+
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     if (!glfwInit())
     {
         return -1;

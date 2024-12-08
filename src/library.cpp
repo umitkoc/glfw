@@ -1,6 +1,13 @@
 #include "library.hpp"
 
+auto LibraryTest::sum(int x, int y) -> int
+{
+    return x + y;
+}
 
-int sum(int x,int y){
-    return x+y;
+LibraryTest::LibraryTest(){
+
+}
+LibraryTest::~LibraryTest(){
+    
 }
