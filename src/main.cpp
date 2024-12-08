@@ -1,38 +1,21 @@
 #include <iostream>
-#include <glm/mat4x4.hpp>
+#include "shaders.hpp"
 #include <glad/gl.h>
 #include <GLFW/glfw3.h>
-
-char *vssource =
-    "#version 330 core\n                                    \
- layout (location = 0) in vec3 inPosition;              \
- void main()                                            \    
- {                                                      \
-    gl_Position = vec4(inPosition, 1.0);                \
- }";
-char *fssource =
-    "#version 330 core\n                                    \
- out vec4 fragColor;                                    \
- void main()                                            \    
- {                                                      \
-    fragColor = vec4(1.0f, 0.0f, 0.0f, 1.0f);           \
- }";
-
 float vertices[] = {
-    -0.6f, -0.1f, 0.0f,
+    -0.6f, -0.6f, 0.0f,
     0.5f, -0.5f, 0.0f,
-    0.0f, 0.5f, 0.8f};
+    0.0f, 0.5f, 0.0f};
 auto main() -> int
 {
-    unsigned int programId;
+    // glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    // glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    // glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     if (!glfwInit())
     {
         return -1;
     }
     GLFWwindow *window = glfwCreateWindow(800, 600, "Deneme", NULL, NULL);
-
-    glm::mat4 mat;
-
     if (window == NULL)
     {
         std::cout << "window is not working" << std::endl;
@@ -46,49 +29,39 @@ auto main() -> int
         return -1;
     }
 
-    programId = glCreateProgram();
+    ShadersProgram program;
+    program.attachShader("./shaders/vs.glsl", GL_VERTEX_SHADER);
+    program.attachShader("./shaders/fs.glsl", GL_FRAGMENT_SHADER);
+    program.link();
 
-    // for shader
-    unsigned int vertexShaderId = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShaderId, 1, &vssource, NULL);
-    glCompileShader(vertexShaderId);
-
-    // for fragment
-    unsigned int fragmentShaderId = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShaderId, 1, &fssource, NULL);
-    glCompileShader(fragmentShaderId);
-
-    // attack
-    glAttachShader(programId, vertexShaderId);
-    glAttachShader(programId, fragmentShaderId);
-
-    // link to id
-    glLinkProgram(programId);
-
-    unsigned int VBO;
     unsigned int VAO;
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    unsigned int VBO;
+   //vertex array object oluşturuluyor
+    glGenVertexArrays(1, &VAO); 
+    //vertex buffer object oluşuruluyor
+    glGenBuffers(1,&VBO);
+
+    //vertex array object aktif edildi.
     glBindVertexArray(VAO);
-
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 3, (void *)0);
-    glEnableVertexAttribArray(0);
+    //vertex buffer nesnesi aktif edildi.
+    glBindBuffer(GL_ARRAY_BUFFER,VBO);
+    //vertex buffer'a nokta bilgileri ytollanıyor
+    glBufferData(GL_ARRAY_BUFFER,sizeof(vertices),vertices,GL_STATIC_DRAW);
+    //gönderilen vertex'e ait özellikler etiketleniyor
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    //özellik  etiket i aktif ediliyor.
+    glEnableVertexAttribArray(0); 
 
     while (!glfwWindowShouldClose(window))
     {
-        glClearColor(0.0f, 0.4f, 0.7f, 1.0f);
+        glClearColor(0.5f, 0.4f, 0.7f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-
-        glUseProgram(programId);
+        program.use();
 
         glBindVertexArray(VAO);
         glEnableVertexAttribArray(0);
 
-        glDrawArrays(GL_TRIANGLES,0,3);
-
+        glDrawArrays(GL_TRIANGLES, 0, 3);
         glfwSwapBuffers(window);
         glfwPollEvents();
     }

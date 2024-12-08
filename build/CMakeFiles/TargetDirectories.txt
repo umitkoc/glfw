@@ -1,3 +1,0 @@
-/home/monster/Desktop/glfw/build/CMakeFiles/Deneme.dir
-/home/monster/Desktop/glfw/build/CMakeFiles/edit_cache.dir
-/home/monster/Desktop/glfw/build/CMakeFiles/rebuild_cache.dir
