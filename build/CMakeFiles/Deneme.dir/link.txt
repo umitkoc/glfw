@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/Deneme.dir/src/library.cpp.o CMakeFiles/Deneme.dir/src/main.cpp.o -o Deneme  /usr/lib/x86_64-linux-gnu/libglfw.so.3.3 
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/Deneme.dir/link.d CMakeFiles/Deneme.dir/src/library.cpp.o CMakeFiles/Deneme.dir/src/gl.c.o CMakeFiles/Deneme.dir/src/main.cpp.o -o Deneme  /usr/local/lib/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a -lm -ldl
