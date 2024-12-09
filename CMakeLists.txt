@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.28)
 project(Deneme)
 set(PROJECT_DIR ${CMAKE_SOURCE_DIR})
 set(PROJECT_INCLUDE_DIR ${PROJECT_DIR}/include)

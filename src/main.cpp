@@ -35,8 +35,8 @@ auto main() -> int
     }
 
     ShadersProgram program;
-    program.attachShader("./shaders/vs.glsl", GL_VERTEX_SHADER);
-    program.attachShader("./shaders/fs.glsl", GL_FRAGMENT_SHADER);
+    program.attachShader("../shaders/vs.glsl", GL_VERTEX_SHADER);
+    program.attachShader("../shaders/fs.glsl", GL_FRAGMENT_SHADER);
     program.link();
 
     unsigned int VAO;

@@ -40,7 +40,7 @@ std::string ShadersProgram::getShaderFromFile(const char * filename){
     if(file.is_open()){
         char readChar;
 
-        while((readChar==file.get())!=EOF){
+        while((readChar=file.get())!=EOF){
             data+=readChar;
         }
         file.close();
